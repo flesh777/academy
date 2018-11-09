@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Информация о пользователь</h1>
+    <?php  $browser = get_browser(null, true); ?>
+    <dl>
+        <dt><strong>Ваш IP адрес:</strong></dt>
+        <dd><em><?php print($_SERVER['REMOTE_ADDR']); ?></em></dd>
+
+        <dt><strong>Операциооая система:</strong></dt>
+        <dd><em><?php print($browser['platform']);?></em></dd>
+
+        <dt><strong>Браузер:</strong></dt>
+        <dd><em><?php print ($browser['browser']); ?></em></dd>
+    </dl>   
+
+    <hr>
+    <br>
+    <p><?php print("Мой первый сценарий"); ?></p>
+
+</body>
+</html>
